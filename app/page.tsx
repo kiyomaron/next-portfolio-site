@@ -1,6 +1,9 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { LuSunMedium } from "react-icons/lu";
+import { LuMoon } from "react-icons/lu";
+import { BiRightArrow } from "react-icons/bi";
 
 export default function Home() {
   const [darkTheme, setDarkTheme] = useState<boolean | undefined>(undefined);
@@ -28,9 +31,10 @@ export default function Home() {
 
   return <div>
     <div className="container">
-      <nav>
+      <header>
         <div className="title">Portfolio site</div>
-        <div>
+        <div className="theme-color-switch">
+          <LuSunMedium />
           <form action="#">
             <label className="switch">
               <input
@@ -41,15 +45,24 @@ export default function Home() {
               <span className="slider"></span>
             </label>
           </form>
+          <LuMoon />
         </div>
-      </nav>
+      </header>
       <section>
         <div className="content">
-          <h1>KIYONA TRACY's <br/>portfolio site</h1>
-          <h3>Profile</h3>
-          <p>born in 1995</p>
-          <p>Web fullstack Developer from Japan</p>
-          <button className="primary-btn">Contact</button>
+          <div className='content-inner'>
+            <div className="top-content">
+              <h1>KIYO's <br/>portfolio site</h1>
+              <p>Make the World better.</p>
+              <button className="primary-btn">Contact</button>
+            </div>
+            <ul className="menu">
+              <li><BiRightArrow className="icon-s mr-2"/><a href="./profile">Profile</a></li>
+              <li>Skills</li>
+              <li>Works</li>
+              <li>Contact</li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>

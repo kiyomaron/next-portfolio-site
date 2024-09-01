@@ -1,7 +1,7 @@
 "use client";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
 // import { FC, ReactNode, memo } from "react";
 // import { RecoilRoot } from "recoil";
@@ -10,7 +10,7 @@ import "./globals.css";
   chilrdren: ReactNode
 } */
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 /* export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head></head>
-      <body className={inter.className}>{children}
+      <body>{children}
         <script
           dangerouslySetInnerHTML={{
             __html: themeInitializerScript,
