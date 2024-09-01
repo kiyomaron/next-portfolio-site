@@ -7,9 +7,16 @@ import { BiRightArrow } from "react-icons/bi";
 
 export default function Home() {
   const [darkTheme, setDarkTheme] = useState<boolean | undefined>(undefined);
+  const [currentMenu, setCurrentMenu] = useState<string | undefined>('home');
 
   const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDarkTheme(e.target.checked);
+  };
+
+  const handleMenu = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e);
+    
+    setCurrentMenu(e.target.id);
   };
   
   const changeThemeColor = () => {
@@ -25,9 +32,40 @@ export default function Home() {
     }
   };
 
+  const changeMenuArrow = () => {
+    console.log('change here.');
+    
+  };
+
   useEffect(() => {
     changeThemeColor();
   }, [darkTheme]);
+
+  useEffect(() => {
+    changeMenuArrow();
+  }, [currentMenu]);
+
+  const getContent = () => {
+    switch (currentMenu) {
+      case 'profile':
+        return (
+          <div className="top-content">
+            <h1 className="text-5xl pb-4">Profile</h1>
+            <h3>Kiyona Tracy</h3>
+            <p>Fullstack Web Developer from Japan</p>
+          </div>
+        )
+      case 'home':
+      default:
+        return (
+          <div className="top-content">
+            <h1 className="text-5xl pb-4">Hello,<br/>I'm KIYO!</h1>
+            <p>Fullstack Web Developer from Japan</p>
+            <button className="primary-btn">Contact</button>
+          </div>
+        );
+    }
+  };
 
   return <div>
     <div className="container">
@@ -51,14 +89,10 @@ export default function Home() {
       <section>
         <div className="content">
           <div className="content-inner">
-            <div className="top-content">
-              <h1 className="text-5xl pb-4">Hello,<br/>I'm KIYONA!</h1>
-              <p>Web fullstack Developer from Japan</p>
-              <button className="primary-btn">Contact</button>
-            </div>
+            {getContent()}
             <ul className="menu">
-              <li><BiRightArrow className="icon-s mr-2"/><a href="#">Home</a></li>
-              <li><a href="./profile">Profile</a></li>
+              <li id="home" onClick={handleMenu}><BiRightArrow className="icon-s mr-2"/>Home</li>
+              <li id="profile" onClick={handleMenu}>Profile</li>
               <li>Skills</li>
               <li>Works</li>
               <li>Contact</li>

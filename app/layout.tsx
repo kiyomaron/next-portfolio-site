@@ -30,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <head></head>
+      <head>
+        <title>Kiyo's Portfolio site</title>
+      </head>
       <body>{children}
         <script
           dangerouslySetInnerHTML={{

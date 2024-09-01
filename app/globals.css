@@ -113,6 +113,10 @@ section .content {
   height: 90vh;
 }
 
+/* section .content-inner {
+  min-height: 200px;
+} */
+
 section .content p {
   font-size: 1.2rem;
   color: var(--color-paragraph);
@@ -125,6 +129,7 @@ section .content ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  height: 200px;
 }
 
 section .menu li {
