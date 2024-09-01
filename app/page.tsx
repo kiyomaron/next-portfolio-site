@@ -50,14 +50,15 @@ export default function Home() {
       </header>
       <section>
         <div className="content">
-          <div className='content-inner'>
+          <div className="content-inner">
             <div className="top-content">
-              <h1>KIYO's <br/>portfolio site</h1>
-              <p>Make the World better.</p>
+              <h1 className="text-5xl pb-4">Hello,<br/>I'm KIYONA!</h1>
+              <p>Web fullstack Developer from Japan</p>
               <button className="primary-btn">Contact</button>
             </div>
             <ul className="menu">
-              <li><BiRightArrow className="icon-s mr-2"/><a href="./profile">Profile</a></li>
+              <li><BiRightArrow className="icon-s mr-2"/><a href="#">Home</a></li>
+              <li><a href="./profile">Profile</a></li>
               <li>Skills</li>
               <li>Works</li>
               <li>Contact</li>
