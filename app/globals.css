@@ -114,8 +114,8 @@ section .content {
 }
 
 section .content h1 {
-  font-size: 55px;
-  padding-bottom: 2rem;
+  font-size: 4rem;
+  padding-bottom: 3rem;
 }
 
 section .content h3 {
@@ -123,8 +123,9 @@ section .content h3 {
 }
 
 section .content p {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: var(--color-paragraph);
+  font-weight: 700;
 }
 
 section .content ul {
@@ -139,14 +140,6 @@ section .menu li {
   display: flex;
   align-items: center;
 }
-
-/* section .content li {
-  padding-bottom: 20px;
-}
-
-section .content li:last-child {
-  padding-bottom: 0;
-} */
 
 section .content-inner {
   display: flex;
@@ -235,6 +228,7 @@ input:checked + .slider:before {
 .icon-s {
   font-size: 14px;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
