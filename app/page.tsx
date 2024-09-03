@@ -91,11 +91,11 @@ export default function Home() {
           <div className="content-inner">
             {getContent()}
             <ul className="menu">
-              <li id="home" onClick={handleMenu}><BiRightArrow className="icon-s mr-2"/>Home</li>
-              <li id="profile" onClick={handleMenu}>Profile</li>
-              <li>Skills</li>
-              <li>Works</li>
-              <li>Contact</li>
+              <li id="home" onClick={handleMenu}><BiRightArrow className="menu-arrow icon-s mr-2"/>Home</li>
+              <li id="profile" onClick={handleMenu}><BiRightArrow className="menu-arrow icon-s mr-2"/>Profile</li>
+              <li><BiRightArrow className="menu-arrow icon-s mr-2"/>Skills</li>
+              <li><BiRightArrow className="menu-arrow icon-s mr-2"/>Works</li>
+              <li><BiRightArrow className="menu-arrow icon-s mr-2"/>Contact</li>
             </ul>
           </div>
         </div>

@@ -135,6 +135,18 @@ section .content ul {
 section .menu li {
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.menu li .menu-arrow {
+  opacity: 0;
+  transform: translate(-10px, 0);
+}
+
+.menu li:hover .menu-arrow {
+  opacity: 1;
+  transition: all, 0.4s;
+  transform: translate(0, 0);
 }
 
 section .content-inner {
